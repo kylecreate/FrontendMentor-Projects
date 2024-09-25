@@ -1,0 +1,157 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* Global Stylings */
+:root {
+    /* Colors */
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --FF-BSD: "Big Shoulders Display", sans-serif;
+    --FF-LD: "Lexend Deca", sans-serif;
+
+    --FW-400: 400;
+    --FW-700: 700;
+
+    --FS-15: 0.938rem; /* 15px */
+}
+
+body {
+    background-color: var(--clr-white);
+    color: var(--clr-white);
+    font-size: var(--FS-15);
+    font-weight: var(--FW-400);
+}
+
+/* Cards */
+.card-container {
+    height: 100vh;
+    margin: 0.625rem auto;
+    max-width: 19.5rem;
+}
+
+.card {
+    height: 18.75rem;
+    padding: 1.56rem;
+}
+
+.card-img {
+    margin-bottom: 1.25rem;
+    width: 3.12rem;
+}
+
+.card-title {
+    font-family: var(--FF-BSD);
+    font-size: 1.5rem;
+    font-weight: var(--FW-700);
+    margin-bottom: 1.563rem;
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-family: var(--FF-LD);
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+/* Button */
+.btn {
+    background-color: var(--clr-white);
+    border-radius: 2rem;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--FF-LD);
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+/* Cards & Card Buttons */
+.card-1 {
+    background-color: var(--clr-bright-orange);
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+}
+
+.card-1 .btn {
+    color: var(--clr-bright-orange);
+}
+
+.card-2 {
+    background-color: var(--clr-dark-cyan);
+}
+
+.card-2 .btn {
+    color: var(--clr-dark-cyan);
+}
+
+.card-3 {
+    background-color: var(--clr-very-dark-cyan);
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+}
+
+.card-3 .btn {
+    color: var(--clr-very-dark-cyan);
+}
+
+.card-1 .btn:hover,
+.card-2 .btn:hover,
+.card-3 .btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--clr-white);
+    color: var(--clr-white);
+}
+
+/* Desktop/Tablet Media Query */
+@media (min-width: 48rem) {
+    .card-container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 50rem;
+    }
+
+    .card {
+        height: 23rem;
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.75rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .card-1 {
+        border-bottom-left-radius: 0.625rem;
+        border-top-left-radius: 0.625rem;
+        border-top-right-radius: 0;
+    }
+
+    .card-3 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0.625rem;
+        border-top-right-radius: 0.625rem;
+    }
+}
